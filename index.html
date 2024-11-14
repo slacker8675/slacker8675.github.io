@@ -1,6 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Password Protection Prompt -->
+    <div id="password-protection" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
+        <h2>Enter Password</h2>
+        <input type="password" id="password-input" placeholder="Password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Try again.</p>
+    </div>
+
+    <!-- Protected Content - Initially Hidden -->
+    <div id="protected-content" style="display: none;">
+        <!-- Your existing website content goes here -->
+        <header>
+            <h1>Welcome to My Website</h1>
+        </header>
+        <main>
+            <p>This is my main content that should be protected by a password.</p>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript function to check the password
+        function checkPassword() {
+            const passwordInput = document.getElementById("password-input").value;
+            const errorMessage = document.getElementById("error-message");
+
+            // Check if the entered password is correct
+            if (passwordInput === "beer") {
+                // Hide the password prompt and show the protected content
+                document.getElementById("password-protection").style.display = "none";
+                document.getElementById("protected-content").style.display = "block";
+            } else {
+                // Display an error message if the password is incorrect
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
+
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Game</title>
