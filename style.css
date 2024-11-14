@@ -17,11 +17,11 @@ body {
     border-radius: 8px;
 }
 
-h1, h2 {
+h1, p {
     color: #333;
 }
 
-.start-button, .next-button, .answer-button {
+#next-btn, .answer-button {
     padding: 10px 20px;
     font-size: 16px;
     margin: 10px 0;
@@ -32,6 +32,6 @@ h1, h2 {
     background-color: #007bff;
 }
 
-.start-button:hover, .next-button:hover, .answer-button:hover {
+#next-btn:hover, .answer-button:hover {
     background-color: #0056b3;
 }
