@@ -8,9 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Trivia Game!</h1>
-        <p>Test your knowledge with our fun trivia questions!</p>
-        <a href="quiz.html" class="start-button">Start Quiz</a>
+        <h1>Trivia Game</h1>
+        <p id="question">Loading question...</p>
+        <div id="answers">
+            <!-- Answer buttons will be generated here by JavaScript -->
+        </div>
+        <button id="next-btn" onclick="loadNextQuestion()">Next</button>
+        <p id="score">Score: <span id="score-value">0</span></p>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
